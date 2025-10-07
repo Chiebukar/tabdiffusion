@@ -19,6 +19,7 @@ samples = td.sample(
     feature_bias={"country":{"US":0.5,"CA":0.3,"NG":0.2}},
     steps=50
 )
+```
 
 tabdiffusion stores training metrics in td.train_losses and td.val_losses, and saves the best checkpoint to tabdiffusion_best.pt by default.
 
