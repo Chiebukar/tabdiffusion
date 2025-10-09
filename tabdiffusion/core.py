@@ -135,7 +135,7 @@ class TabDiffusion:
         val_loader = DataLoader(val_ds, batch_size=batch_size, shuffle=False)
 
         opt = torch.optim.AdamW(self.model.parameters(), lr=lr)
-        scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(opt, mode="min", factor=0.5, patience=2, verbose=False)
+        scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(opt, mode="min", factor=0.5, patience=2)
 
         best_val = float("inf")
         patience = trainer_kwargs.get("patience", 10) if trainer_kwargs else 10
